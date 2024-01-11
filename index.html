@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css" />
+  </head>
+
+  <body>
+    <div class="container-fluid mx-auto col-lg-7 mt-lg-5 p-3 mt-2 shadow">
+      <h3 class="my-3 text-center">Mini Mart</h3>
+      <input type="text" class="shadow-none form-control" id="inp" />
+      <button
+        class="w-100 btn btn-outline-danger my-2 btn-sm p-2"
+        onclick="addItems()"
+      >
+        click
+      </button>
+      <div id="show"></div>
+    </div>
+
+    <div class="container-fluid mx-auto col-lg-7 mt-lg-5 p-3 mt-2 shadow">
+      <button class="btn btn-sm btn-dark mx-2 my-2" onclick=" addTO()">
+        Add to Beginging
+      </button>
+      <button class="btn btn-sm btn-danger mx-2 my-2" onclick="deleteFIRST()">Delete first</button>
+      <button class="btn btn-sm btn-danger mx-2 my-2" onclick="deleteLAST()">Delete Last</button>
+      <button class="btn btn-sm btn-danger mx-2 my-2" onclick="deleteANY()">Delete  Any</button>
+      <button class="btn btn-sm btn-primary mx-2 my-2" onclick="edit()"> Edit</button>
+      <button class="btn btn-sm btn-danger mx-2 my-2" onclick="deleteALL()"> Delete All</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
