@@ -18,7 +18,6 @@ function addItems() {
   cart.push(inp.value)
   displayCART()
   document.getElementById('inp').value=''
-
  }else {
   alert ('Fill empty space')
   }
@@ -51,7 +50,10 @@ function deleteANY() {
  displayCART() 
 }
 function deleteALL() {
- cart.splice(inp.value)
+ cart.splice(0, cart.length)
+ if (cart.length > 0) {
+  var confirmation = confirm(4)
+ }
  displayCART() 
 }
 function edit() {
@@ -68,7 +70,21 @@ function displayCART() {
   show.innerHTML += 
   `<table style="border: none solid grey;"> 
   <td>  ${i+1}. ${cart[i]}</td>
-  </table>`
-
+  </table>
+  <button class="btn btn-danger  btn-sm" onclick="del(${i})">Delete</button>
+  <button class="btn btn-warning  btn-sm onclick="edit(${i})">Edit</button>`
+   
  }
 }
+
+ function del(index){
+  cart.splice(index,1)
+  displayCART()
+ }
+ 
+ function edit(change){
+  var change = (prompt([cart.length]))
+  var show = (prompt([inp.value]))
+  cart.splice(change,1, show)
+  displayCART()
+ }
